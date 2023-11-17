@@ -1,15 +1,12 @@
 import classNames from "classnames";
 
-function Article({ width, height, value }) {
+function Article({ className, value }) {
   const articleClasses = classNames(
-    "bg-persian-red rounded-xl text-center text-2xl"
+    "bg-persian-red rounded-xl text-center text-2xl",
+    className
   );
 
-  return (
-    <div className={articleClasses} style={{ width: width, height: height }}>
-      {value}
-    </div>
-  );
+  return <div className={articleClasses}>{value}</div>;
 }
 
 export default Article;

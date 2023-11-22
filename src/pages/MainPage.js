@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Article from "../components/Article";
+import FullArticle from "../components/FullArticle";
 
 function MainPage() {
   const [isOpened, setIsOpened] = useState(false);
@@ -72,15 +73,13 @@ function MainPage() {
           })}
         </div>
       ) : (
-        <div
-          className="w-full h-full bg-persian-red rounded-xl text-center text-2xl transition-colors cursor-pointer"
+        <FullArticle
+          value={activeArticle}
           onClick={() => {
             setIsOpened(false);
             setActiveArticle("");
           }}
-        >
-          {activeArticle}
-        </div>
+        />
       )}
     </div>
   );

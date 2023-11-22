@@ -63,12 +63,24 @@ function MainPage() {
                 key={article.id}
                 className={article.additionalClasses}
                 value={article.value}
+                onClick={() => {
+                  setIsOpened(true);
+                  setActiveArticle(article.value);
+                }}
               />
             );
           })}
         </div>
       ) : (
-        <div className="w-full h-full bg-persian-red">{activeArticle}</div>
+        <div
+          className="w-full h-full bg-persian-red rounded-xl text-center text-2xl transition-colors cursor-pointer"
+          onClick={() => {
+            setIsOpened(false);
+            setActiveArticle("");
+          }}
+        >
+          {activeArticle}
+        </div>
       )}
     </div>
   );

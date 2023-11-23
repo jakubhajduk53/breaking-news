@@ -4,53 +4,75 @@ import FullArticle from "../components/FullArticle";
 
 function MainPage() {
   const [isOpened, setIsOpened] = useState(false);
-  const [activeArticle, setActiveArticle] = useState("");
+  const [activeArticle, setActiveArticle] = useState({
+    title: "",
+    subtitle: "",
+    value: "",
+  });
 
   const articles = [
     {
       id: 1,
       additionalClasses: "col-span-2",
-      value: "Article One",
+      title: "Article One",
+      subtitle: "",
+      value: "",
     },
     {
       id: 2,
       additionalClasses: "row-span-2",
-      value: "Article Two",
+      title: "Article Two",
+      subtitle: "",
+      value: "",
     },
     {
       id: 3,
       additionalClasses: "",
-      value: "Article Three",
+      title: "Article Three",
+      subtitle: "",
+      value: "",
     },
     {
       id: 4,
       additionalClasses: "",
-      value: "Article Four",
+      title: "Article Four",
+      subtitle: "",
+      value: "",
     },
     {
       id: 5,
       additionalClasses: "",
-      value: "Article Five",
+      title: "Article Five",
+      subtitle: "",
+      value: "",
     },
     {
       id: 6,
       additionalClasses: "",
-      value: "Article Six",
+      title: "Article Six",
+      subtitle: "",
+      value: "",
     },
     {
       id: 7,
       additionalClasses: "col-span-3 row-span-2",
-      value: "Article Seven",
+      title: "Article Seven",
+      subtitle: "",
+      value: "",
     },
     {
       id: 8,
       additionalClasses: "row-span-2",
-      value: "Article Eight",
+      title: "Article Eight",
+      subtitle: "",
+      value: "",
     },
     {
       id: 9,
       additionalClasses: "col-span-4",
-      value: "Article Nine",
+      title: "Article Nine",
+      subtitle: "",
+      value: "",
     },
   ];
 
@@ -63,10 +85,16 @@ function MainPage() {
               <Article
                 key={article.id}
                 className={article.additionalClasses}
+                title={article.title}
+                subtitle={article.subtitle}
                 value={article.value}
                 onClick={() => {
                   setIsOpened(true);
-                  setActiveArticle(article.value);
+                  setActiveArticle({
+                    title: article.title,
+                    subtitle: article.subtitle,
+                    value: article.value,
+                  });
                 }}
               />
             );
@@ -77,7 +105,11 @@ function MainPage() {
           value={activeArticle}
           onClick={() => {
             setIsOpened(false);
-            setActiveArticle("");
+            setActiveArticle({
+              title: "",
+              subtitle: "",
+              value: "",
+            });
           }}
         />
       )}

@@ -9,7 +9,7 @@ function Article({ className, title, subtitle, onClick }) {
   return (
     <div className={articleClasses} onClick={onClick}>
       <p className=" text-2xl">{title}</p>
-      <p className=" text-xl">{subtitle}</p>
+      <p className=" text-xl pl-5 pr-5">{subtitle}</p>
     </div>
   );
 }

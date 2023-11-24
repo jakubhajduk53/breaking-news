@@ -9,7 +9,7 @@ function FullArticle({ value, onClick }) {
         </p>
       </div>
       <div
-        className="w-full h-full row-span-1 col-span-4 bg-verdigris hover:bg-verdigris/90 rounded-xl text-center text-2xl cursor-pointer"
+        className="w-full h-full flex items-center justify-center row-span-1 col-span-4 bg-verdigris hover:bg-verdigris/90 rounded-xl text-center text-2xl cursor-pointer"
         onClick={onClick}
       >
         Go Back

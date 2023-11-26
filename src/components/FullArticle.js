@@ -4,7 +4,7 @@ function FullArticle({ value, onClick }) {
       <div className="w-full h-full flex flex-col row-span-4 col-span-4 bg-persian-red rounded-xl text-center text-2xl">
         <p className=" text-2xl">{value.title}</p>
         <p className=" text-xl">{value.subtitle}</p>
-        <p className=" w-[70%] self-center text-lg shadow-xl ml-5 mr-5 rounded-xl mt-5 ">
+        <p className=" w-[70%] self-center text-lg shadow-xl ml-5 mr-5 rounded-xl mt-5  bg-verdigris">
           {value.value}
         </p>
       </div>

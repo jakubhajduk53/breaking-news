@@ -14,6 +14,9 @@ function FullArticle({ value, onClick }) {
       >
         Go Back
       </div>
+      <div className="text-5xl absolute self-center text-verdigris animate-fade-out">
+        {value.title}
+      </div>
     </div>
   );
 }

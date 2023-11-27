@@ -10,6 +10,15 @@ module.exports = {
         vanilla: "#F3DFA2",
         linen: "#EFE6DD",
       },
+      animation: {
+        "fade-out": "fadeOut 1s ease-out forwards",
+      },
+      keyframes: {
+        fadeOut: {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
+      },
     },
   },
   plugins: [],

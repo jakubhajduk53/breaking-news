@@ -11,7 +11,7 @@ module.exports = {
         linen: "#EFE6DD",
       },
       animation: {
-        "fade-out": "fadeOut 1s ease-out forwards",
+        "fade-out": "fadeOut 1.5s ease-out forwards",
       },
       keyframes: {
         fadeOut: {

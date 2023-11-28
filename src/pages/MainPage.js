@@ -95,7 +95,7 @@ function MainPage() {
   ];
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full bg-raisin-black text-raisin-black">
       {!isOpened ? (
         <div className="h-full grid grid-rows-5 grid-cols-4 justify-items-center place-content-center p-2 gap-2">
           {articles.map((article) => {

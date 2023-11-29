@@ -1,11 +1,12 @@
-function FullArticle({ value, onClick }) {
+function FullArticle({ className, onClick, article }) {
+  console.log(article);
   return (
     <div className="w-full h-full grid grid-rows-5 grid-cols-4 justify-items-center place-content-center p-2 gap-2">
       <div className="w-full h-full flex flex-col row-span-4 col-span-4 bg-persian-red rounded-xl text-center text-2xl">
-        <p className=" text-2xl">{value.title}</p>
-        <p className=" text-xl">{value.subtitle}</p>
+        <p className=" text-2xl">{article?.title}</p>
+        <p className=" text-xl">{article?.description}</p>
         <p className=" w-[70%] self-center text-lg shadow-xl ml-5 mr-5 rounded-xl mt-5 bg-red-500/25">
-          {value.value}
+          {article?.content}
         </p>
       </div>
       <div
@@ -15,10 +16,18 @@ function FullArticle({ value, onClick }) {
         Go Back
       </div>
       <div className="text-7xl absolute self-center text-verdigris animate-fade-out">
-        {value.title}
+        {article?.title}
       </div>
     </div>
   );
 }
 
 export default FullArticle;
+// author,
+// content,
+// description,
+// publishedAt,
+// source,
+// title,
+// url,
+// image,

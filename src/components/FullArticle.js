@@ -3,10 +3,26 @@ function FullArticle({ className, onClick, article }) {
   return (
     <div className="w-full h-full grid grid-rows-5 grid-cols-4 justify-items-center place-content-center p-2 gap-2">
       <div className="w-full h-full flex flex-col row-span-4 col-span-4 bg-persian-red rounded-xl text-center text-2xl">
-        <p className=" text-2xl">{article?.title}</p>
+        <p className="text-3xl text-linen">{article.source.name}</p>
+        <p className=" text-2xl">
+          {article?.title}
+          <span className="text-base text-linen"> by {article?.author}</span>
+        </p>
         <p className=" text-xl">{article?.description}</p>
-        <p className=" w-[70%] self-center text-lg shadow-xl ml-5 mr-5 rounded-xl mt-5 bg-red-500/25">
+        <img
+          src={article.urlToImage}
+          className="aspect-video w-96 self-center mt-5"
+        />
+        <p className="flex flex-col w-[70%] self-center text-lg outline outline-raisin-black rounded-xl ml-5 mr-5 mt-5">
           {article?.content}
+          <span
+            className="text-linen underline cursor-pointer"
+            onClick={() => {
+              window.open(article.url, "_blank");
+            }}
+          >
+            View full article
+          </span>
         </p>
       </div>
       <div
@@ -15,19 +31,8 @@ function FullArticle({ className, onClick, article }) {
       >
         Go Back
       </div>
-      <div className="text-7xl absolute self-center text-verdigris animate-fade-out">
-        {article?.title}
-      </div>
     </div>
   );
 }
 
 export default FullArticle;
-// author,
-// content,
-// description,
-// publishedAt,
-// source,
-// title,
-// url,
-// image,

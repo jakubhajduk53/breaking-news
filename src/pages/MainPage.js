@@ -8,12 +8,13 @@ const SITE_URL = process.env.REACT_APP_SITE_URL;
 
 function MainPage() {
   const [newsData, setNewsData] = useState(null);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${SITE_URL}everything?q=breaking&pageSize=10&apiKey=${API_KEY}`
+          `${SITE_URL}everything?q=breaking&pageSize=10&page=${page}&apiKey=${API_KEY}`
         );
         setNewsData(response.data.articles);
       } catch (error) {
@@ -22,7 +23,7 @@ function MainPage() {
     };
 
     fetchData();
-  }, []);
+  }, [page]);
 
   const [isOpened, setIsOpened] = useState(false);
   const [activeArticle, setActiveArticle] = useState({});
@@ -44,6 +45,26 @@ function MainPage() {
               />
             );
           })}
+          <Article
+            onClick={() => {
+              setPage((prevValue) => {
+                if (prevValue > 1) {
+                  return prevValue - 1;
+                }
+              });
+            }}
+            title="Previous Page"
+            className="text-5xl justify-center"
+          />
+          <Article
+            onClick={() => {
+              setPage((prevValue) => {
+                return prevValue + 1;
+              });
+            }}
+            title="Next Page"
+            className="text-5xl justify-center"
+          />
         </div>
       ) : (
         <FullArticle

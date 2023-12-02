@@ -1,5 +1,4 @@
-function FullArticle({ className, onClick, article }) {
-  console.log(article);
+function FullArticle({ onClick, article }) {
   return (
     <div className="w-full h-full grid grid-rows-5 grid-cols-4 justify-items-center place-content-center p-2 gap-2">
       <div className="w-full h-full flex flex-col row-span-4 col-span-4 bg-persian-red rounded-xl text-center text-2xl">

@@ -27,10 +27,9 @@ function MainPage() {
 
   const [isOpened, setIsOpened] = useState(false);
   const [activeArticle, setActiveArticle] = useState({});
-  console.log(activeArticle);
 
   return (
-    <div className="flex flex-col w-full h-full bg-raisin-black text-raisin-black">
+    <div className="flex flex-col row-span-5 w-full h-full bg-raisin-black text-raisin-black">
       {!isOpened ? (
         <div className=" grid grid-rows-4 grid-cols-3 p-2 gap-2">
           {newsData?.map((article) => {

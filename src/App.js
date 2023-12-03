@@ -5,7 +5,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="bg-raisin-black text-raisin-black grid w-full h-screen">
+    <div className="bg-raisin-black text-raisin-black flex flex-col w-full h-screen">
       <Header />
       <Routes>
         <Route element={<MainPage />} path="/" />

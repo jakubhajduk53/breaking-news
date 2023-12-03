@@ -9,7 +9,7 @@ function Article({ className, onClick, description, title }) {
   return (
     <div className={articleClasses} onClick={onClick}>
       <p>{title}</p>
-      <p className=" text-xl pl-5 pr-5">{description}</p>
+      <p className=" text-xl pl-5 pr-5 overflow-hidden">{description}</p>
     </div>
   );
 }

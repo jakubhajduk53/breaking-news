@@ -9,7 +9,7 @@ const SITE_URL = process.env.REACT_APP_SITE_URL;
 function MainPage() {
   const [newsData, setNewsData] = useState(null);
   const [page, setPage] = useState(1);
-
+  console.log(page);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -49,6 +49,8 @@ function MainPage() {
               setPage((prevValue) => {
                 if (prevValue > 1) {
                   return prevValue - 1;
+                } else {
+                  return prevValue;
                 }
               });
             }}

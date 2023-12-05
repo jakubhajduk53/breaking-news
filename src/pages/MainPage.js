@@ -9,7 +9,7 @@ const SITE_URL = process.env.REACT_APP_SITE_URL;
 function MainPage() {
   const [newsData, setNewsData] = useState(null);
   const [page, setPage] = useState(1);
-  console.log(page);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -37,6 +37,7 @@ function MainPage() {
               <Article
                 description={article.description}
                 title={article.title}
+                source={article.source.name}
                 onClick={() => {
                   setIsOpened(true);
                   setActiveArticle(article);
@@ -55,16 +56,20 @@ function MainPage() {
               });
             }}
             title="Previous Page"
-            className="text-5xl justify-center"
+            className="text-5xl justify-center select-none"
           />
           <Article
             onClick={() => {
               setPage((prevValue) => {
-                return prevValue + 1;
+                if (prevValue < 10) {
+                  return prevValue + 1;
+                } else {
+                  return prevValue;
+                }
               });
             }}
             title="Next Page"
-            className="text-5xl justify-center"
+            className="text-5xl justify-center select-none"
           />
         </div>
       ) : (

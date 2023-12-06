@@ -8,9 +8,9 @@ function Article({ className, onClick, description, title, source }) {
 
   return (
     <div className={articleClasses} onClick={onClick}>
-      <p className="text-linen">{source}</p>
+      <p className="text-linen truncate">{source}</p>
       <p className="text-linen/70 truncate">{title}</p>
-      <p className="text-xl pl-5 pr-5 overflow-hidden">{description}</p>
+      <p className="text-xl pl-5 pr-5 truncate">{description}</p>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Article from "../components/Article";
 import FullArticle from "../components/FullArticle";
 import axios from "axios";
+import { nanoid } from "nanoid";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const SITE_URL = process.env.REACT_APP_SITE_URL;
@@ -35,6 +36,7 @@ function MainPage() {
           {newsData?.map((article) => {
             return (
               <Article
+                key={nanoid()}
                 description={article.description}
                 title={article.title}
                 source={article.source.name}

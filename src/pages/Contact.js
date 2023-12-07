@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div className="text-linen flex flex-col items-center text-3xl">
+    <div className="text-linen flex flex-col items-center text-3xl p-3">
       <p>
         Created by: <span className="text-verdigris">Jakub Hajduk</span>
       </p>

@@ -57,6 +57,7 @@ function MainPage() {
                 }
               });
             }}
+            isPagination={true}
             title="Previous Page"
             className="text-5xl justify-center select-none"
           />
@@ -71,6 +72,7 @@ function MainPage() {
               });
             }}
             title="Next Page"
+            isPagination={true}
             className="text-5xl justify-center select-none"
           />
         </div>

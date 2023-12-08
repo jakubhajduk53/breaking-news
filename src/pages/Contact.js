@@ -11,7 +11,12 @@ function Contact() {
         Api: <span className="text-verdigris">https://newsapi.org/</span>
       </p>
       <p>
-        Repository: <span className="text-verdigris"></span>
+        Repository:{" "}
+        <span className="text-verdigris">
+          <a href="https://github.com/jakubhajduk53/breaking-news">
+            https://github.com/jakubhajduk53/breaking-news
+          </a>
+        </span>
       </p>
     </div>
   );

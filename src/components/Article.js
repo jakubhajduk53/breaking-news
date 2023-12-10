@@ -9,7 +9,7 @@ function Article({
   isPagination,
 }) {
   const articleClasses = classNames(
-    "w-full h-full flex flex-col bg-persian-red rounded-xl text-center hover:bg-persian-red/90 transition-colors cursor-pointer text-2xl ",
+    "w-full h-full flex flex-col rounded-xl text-center text-2xl bg-persian-red hover:bg-persian-red/90 transition-colors cursor-pointer ",
     className
   );
 

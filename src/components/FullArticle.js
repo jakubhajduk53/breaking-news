@@ -1,9 +1,9 @@
 function FullArticle({ onClick, article }) {
   return (
-    <div className="w-full h-full grid grid-rows-5 grid-cols-4 justify-items-center place-content-center p-2 gap-2">
-      <div className="w-full h-full flex flex-col row-span-4 col-span-4 bg-persian-red rounded-xl text-center text-2xl">
+    <div className="w-full h-full grid grid-rows-5 grid-cols-4 gap-2 justify-items-center place-content-center p-2">
+      <div className="w-full h-full flex flex-col row-span-4 col-span-4 text-center bg-persian-red rounded-xl text-2xl">
         <p className="text-3xl text-linen">{article.source.name}</p>
-        <p className=" text-2xl">
+        <p className="text-2xl">
           {article?.title}
           <span className="text-base text-linen"> by {article?.author}</span>
         </p>

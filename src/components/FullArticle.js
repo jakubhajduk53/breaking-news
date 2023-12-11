@@ -10,7 +10,7 @@ function FullArticle({ onClick, article }) {
         <p className=" text-xl">{article?.description}</p>
         <img
           src={article.urlToImage}
-          className="aspect-video w-96 self-center mt-5"
+          className="aspect-video w-96 self-center mt-5 border-2"
         />
         <p className="flex flex-col w-[70%] self-center text-lg outline outline-raisin-black rounded-xl ml-5 mr-5 mt-5">
           {article?.content}

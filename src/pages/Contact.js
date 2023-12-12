@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div className="flex flex-col items-center text-linen text-3xl p-3">
+    <div className="flex flex-col items-center text-linen text-lg md:text-3xl p-3">
       <p>
         Created by: <span className="text-verdigris">Jakub Hajduk</span>
       </p>
@@ -8,15 +8,19 @@ function Contact() {
         Email: <span className="text-verdigris">jakubhajduk53@gmail.com</span>
       </p>
       <p>
-        Api: <span className="text-verdigris">https://newsapi.org/</span>
+        Api:{" "}
+        <a href="https://newsapi.org/" className="text-verdigris underline">
+          https://newsapi.org/
+        </a>
       </p>
       <p>
         Repository:{" "}
-        <span className="text-verdigris">
-          <a href="https://github.com/jakubhajduk53/breaking-news">
-            https://github.com/jakubhajduk53/breaking-news
-          </a>
-        </span>
+        <a
+          href="https://github.com/jakubhajduk53/breaking-news"
+          className="text-verdigris underline"
+        >
+          GitHub
+        </a>
       </p>
     </div>
   );

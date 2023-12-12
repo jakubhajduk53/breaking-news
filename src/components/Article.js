@@ -9,7 +9,7 @@ function Article({
   isPagination,
 }) {
   const articleClasses = classNames(
-    "w-full h-full flex flex-col rounded-xl text-center text-2xl bg-persian-red hover:bg-persian-red/90 transition-colors cursor-pointer ",
+    "w-full h-full flex flex-col rounded-xl text-center text-lg sm:text-2xl bg-persian-red hover:bg-persian-red/90 transition-colors cursor-pointer ",
     className
   );
 
@@ -19,7 +19,7 @@ function Article({
       <p className={isPagination ? "text-linen/70" : "text-linen/70 truncate"}>
         {title}
       </p>
-      <p className="text-xl pl-5 pr-5 truncate xl:whitespace-normal ">
+      <p className="text-sm sm:text-xl pl-5 pr-5 truncate xl:whitespace-normal ">
         {description}
       </p>
     </div>
